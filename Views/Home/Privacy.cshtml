@@ -1,6 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "Claims Approval";
 }
-<h1>@ViewData["Title"]</h1>
+<div class="text-center">
+    <h1 class="display-4" style="color:#b4b8d1;font-weight:bold">@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+    <p style="color:#b4b8d1;font-size:15px">Here you should be able to see claims made and alter their status depending on what stage its in processing.</p>
+
+    <table style="border-collapse:collapse; border-spacing:300px;width:100%">
+        <tr style="background-color: #8496A2; color:#263A47;border-bottom:2px solid #b4b8d1 ">
+            <th style="width:120px">Claim id:</th>
+            <th style="width:200px">Lecturer Name:</th>
+            <th style="width:200px">Lecturer Surname:</th>
+            <th style="width:200px">Lecturer Number:</th>
+            <th style="width:180px">Claim period:</th>
+            <th style="width:180px">Salary Amount:</th>
+            <th style="width:180px">Supporting Documents</th>
+            <th style="width:200px">Claim Status:</th>
+        </tr>
+        <tr style="background-color: #8496A2; color:#263A47" border-bottom:2px solid #b4b8d1>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><button type="submit" style="background-color:#8496A2; border-radius:12px;color:#263A47; font-weight:bold;font-size:10px">Download</button></td>
+            <td><button type="submit" style="background-color:#ffe49c; border-radius:12px;color:black; font-weight:bold;font-size:10px">In Progress</button><button type="submit" style="background-color:green; border-radius:12px;color:#9cffa4; font-weight:bold;font-size:10px">Approved</button> <button type="submit" style="background-color:#ff9c9c; border-radius:12px;color:red; font-weight:bold;font-size:10px">Declined</button></td>
+        </tr>
+    </table>
+</div>
+
