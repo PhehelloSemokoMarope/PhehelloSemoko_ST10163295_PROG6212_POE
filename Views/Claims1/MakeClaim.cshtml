@@ -1,0 +1,47 @@
+﻿@model List<Claims>
+@{
+}
+<h2 class=" text-center mb-5">List of Claims</h2>
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-controller="Claim" asp-action="SubmitClaim">New Product</a>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Lecturer Name</th>
+            <th>Lecturer Surname</th>
+            <th>Lecturer Number</th>
+            <th>Date Started</th>
+            <th>Date Ended</th>
+            <th>File Submitted</th>
+            <th>Approval</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var Claims in Model)
+        {
+            <tr>
+                <td>@Claims.id</td>
+                <td>@Claims.LName</td>
+                <td>@Claims.LSurname</td>
+                <td>@Claims.LNumber</td>
+                <td>@Claims.LStart</td>
+                <td>@Claims.LEnd</td>
+                <td>@Claims.FileName</td>
+                <td style="white-space:nowrap">
+                <a class="btn btn-primary btn-sm" asp-controller="Claims" asp-action="Approved" asp-route-id="@Claims.id">Approved</a>
+                    <a class="btn btn-primary btn-sm" asp-controller="Claims" asp-action="Declined" asp-route-id="@Claims.id">Declined</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
